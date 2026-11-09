@@ -133,3 +133,7 @@ Five bilingual PHP chapters cover storage architecture and configuration, inode/
 - ROBUST services: central service reference, public/private ports, service responsibilities and incident tracing. Installation steps remain in install-grid and install-hypergrid.
 - Disaster recovery: entire grid inventory, coordinated restore points, restore order and drills. Per-archive OAR/IAR options remain in their dedicated chapters.
 - Operations monitoring: observability and alerting, separate from detailed physics/script tuning in performance.php.
+
+## Site navigation (2026-11)
+
+The single bilingual registry `handbook_groups()` in `inc/site.php` drives both the collapsible sidebar and **all** home-page links. Each of the 36 technical pages appears exactly once in one of eight topic groups; `index.php` is always accessible separately. All five FSAssets chapters and the four newest SQL/ROBUST/recovery/monitoring guides are listed as individual entries. The active group opens natively through HTML `<details>` without requiring JavaScript.
