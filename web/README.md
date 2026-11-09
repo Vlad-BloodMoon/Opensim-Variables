@@ -107,3 +107,9 @@ Reference base: `Vlad-BloodMoon/opensim` `BUILDING.md`, `bin/OpenSim.ini.example
 - `install-logs.php` covers OpenSim.log and Robust.log, the actual log4net configuration in `bin/OpenSim.exe.config` and `bin/Robust.exe.config`, live Linux and Windows reading, systemd journals, event correlation, MySQL service logs and safe sharing of extracts.
 - Install and general troubleshooting pages now point to log analysis before blind changes or restarts.
 - Paths and service unit names are illustrative; inspect each installation's working directory, log4net appender and service manager.
+
+## Structured troubleshooting style
+
+Every incident description in installation checks, archive/region troubleshooting, and WebRTC voice troubleshooting now follows a structured order: symptom and background → relevant logs → likely search terms (not guaranteed exact log messages) → read-only verification → conditional fix. Generic diagnostic markup is implemented in `inc/site.php`.
+
+OpenSim.log and Robust.log are distinct and often both relevant; read `install-logs.php` before modifying configuration. Back up logs and redact sensitive details before sharing.

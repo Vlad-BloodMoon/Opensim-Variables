@@ -8,6 +8,20 @@ function sec($fr,$en){echo '<h2>'.e(t($fr,$en)).'</h2>';}
 function p($fr,$en){echo '<p>'.e(t($fr,$en)).'</p>';}
 function callout($fr,$en){echo '<div class="callout">'.e(t($fr,$en)).'</div>';}
 function sample($code,$fr,$en){echo '<section class="sample"><p>'.e(t($fr,$en)).'</p><pre>'.e($code).'</pre><button class="copy" data-code="'.e($code).'">'.e(t('Copier','Copy')).'</button></section>';}
+function diagnostic_steps(array $d): void {
+    $fields=[
+      'logs'=>['Journaux à examiner','Logs to examine'],
+      'search'=>['Messages à rechercher (indices, pas erreurs garanties)','Messages to search (clues, not guaranteed errors)'],
+      'verify'=>['Vérifications avant de modifier','Checks before changing anything'],
+      'fix'=>['Correction possible après confirmation','Possible fix after confirmation']
+    ];
+    echo '<div class="diagnostic-steps">';
+    foreach($fields as $key=>$labels){
+      if(!isset($d[$key])||!is_array($d[$key])||count($d[$key])<2)continue;
+      echo '<p><strong>'.e(t($labels[0],$labels[1])).' :</strong> '.e(t($d[$key][0],$d[$key][1])).'</p>';
+    }
+    echo '</div>';
+}
 function subheading($fr,$en){echo '<h3>'.e(t($fr,$en)).'</h3>';}
 function options_table($rows){echo '<div class="overflow"><table><thead><tr><th>'.e(t('Option','Option')).'</th><th>'.e(t('Signification','Meaning')).'</th><th>'.e(t('Attention','Caution')).'</th></tr></thead><tbody>';foreach($rows as $r)echo '<tr><td><code>'.e($r[0]).'</code></td><td>'.e(t($r[1],$r[2])).'</td><td>'.e(t($r[3],$r[4])).'</td></tr>';echo '</tbody></table></div>';}
 function begin_page($fr,$en,$frsub,$ensub){global $page,$lang;
