@@ -17,6 +17,7 @@ Required layout:
 OpenSim_Variables/
     index.php
     installation.php
+    install-platforms.php
     install-standalone.php
     install-grid.php
     install-first-login.php
@@ -83,7 +84,8 @@ On `sections.php`, each listed parameter also shows its file references and cate
 
 ## Installation learning path (FR / EN)
 
-- `installation.php`: target version, architecture decision, SDK/build and prerequisites.
+- `installation.php`: target version, architecture decision, SDK/build and prerequisites. Ubuntu is an example, NOT a requirement.
+- `install-platforms.php`: operating-system-specific paths for Windows, Linux distributions and macOS.
 - `install-standalone.php`: minimal single-process setup, SQLite default, first region.
 - `install-grid.php`: MySQL, ROBUST, GridCommon.ini, distributed regions.
 - `install-first-login.php`: create a user, login URI and viewer checks.
