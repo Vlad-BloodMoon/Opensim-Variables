@@ -8,6 +8,7 @@ function sec($fr,$en){echo '<h2>'.e(t($fr,$en)).'</h2>';}
 function p($fr,$en){echo '<p>'.e(t($fr,$en)).'</p>';}
 function callout($fr,$en){echo '<div class="callout">'.e(t($fr,$en)).'</div>';}
 function sample($code,$fr,$en){echo '<section class="sample"><p>'.e(t($fr,$en)).'</p><pre>'.e($code).'</pre><button class="copy" data-code="'.e($code).'">'.e(t('Copier','Copy')).'</button></section>';}
+function subheading($fr,$en){echo '<h3>'.e(t($fr,$en)).'</h3>';}
 function options_table($rows){echo '<div class="overflow"><table><thead><tr><th>'.e(t('Option','Option')).'</th><th>'.e(t('Signification','Meaning')).'</th><th>'.e(t('Attention','Caution')).'</th></tr></thead><tbody>';foreach($rows as $r)echo '<tr><td><code>'.e($r[0]).'</code></td><td>'.e(t($r[1],$r[2])).'</td><td>'.e(t($r[3],$r[4])).'</td></tr>';echo '</tbody></table></div>';}
 function begin_page($fr,$en,$frsub,$ensub){global $page,$lang;
 $pages=[['index','Accueil','Home'],['configuration','Fichiers INI','INI files'],['regions','Régions et varregions','Regions & varregions'],['oar','Archives OAR','OAR archives'],['iar','Archives IAR','IAR archives'],['performance','Performances','Performance'],['scripts','Scripts LSL / OSSL','LSL / OSSL scripts'],['dictionary','Dictionnaire INI','INI dictionary'],['sources','Références','References']];
