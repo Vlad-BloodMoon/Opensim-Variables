@@ -21,6 +21,7 @@ OpenSim_Variables/
     regions.php
     configuration.php
     sections.php            <- browsable alphabetical INI sections
+    ini-parameters.php      <- INI-referenced entries only
     console.php
     procedures.php
     troubleshooting.php
@@ -50,7 +51,8 @@ Requires PHP 8+ and a conventional HTTP(S) web server. No database, framework or
 - Independent self-hosted voice chapter: installation, two-key configuration, matching modules, AdHoc API and troubleshooting. This chapter is based on BloodMoon-Voice v1.0.0 and OpenSimulator v0.9.3.1-webrtc.3.
 - OSSL: **266 unique public os-prefixed methods** extracted from `OSSL_Api.cs` (297 declarations including overloads), with code references and wiki search links. Not all source methods necessarily map to callable/safe functions.
 - INI section browser: filters the CSV to entries with INI file references and omits unresolved section names; some example-only or optional module entries remain.
-- Source code catalog: unfiltered raw extracted settings, including internal/inferred values; not a literal INI reference.
+- INI parameters: only records with a non-empty IniFiles reference (including examples and optional modules).
+- Code-only variables (dictionary.php): only records with an empty IniFiles reference. The two result sets do not overlap.
 
 ## Editorial safeguards
 The documentation is **not yet exhaustive** and is not affiliated with the OpenSimulator project.
