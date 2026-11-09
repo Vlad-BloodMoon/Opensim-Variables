@@ -1,0 +1,1895 @@
+[
+ {
+  "name": "osSetTerrainHeight",
+  "signatures": [
+   "public LSL_Integer osSetTerrainHeight(int x, int y, double val)"
+  ],
+  "sourceLine": 551
+ },
+ {
+  "name": "osTerrainSetHeight",
+  "signatures": [
+   "public LSL_Integer osTerrainSetHeight(int x, int y, double val)"
+  ],
+  "sourceLine": 558
+ },
+ {
+  "name": "osGetTerrainHeight",
+  "signatures": [
+   "public LSL_Float osGetTerrainHeight(int x, int y)"
+  ],
+  "sourceLine": 580
+ },
+ {
+  "name": "osTerrainGetHeight",
+  "signatures": [
+   "public LSL_Float osTerrainGetHeight(int x, int y)"
+  ],
+  "sourceLine": 586
+ },
+ {
+  "name": "osTerrainFlush",
+  "signatures": [
+   "public void osTerrainFlush()"
+  ],
+  "sourceLine": 602
+ },
+ {
+  "name": "osRegionRestart",
+  "signatures": [
+   "public int osRegionRestart(double seconds)",
+   "public int osRegionRestart(double seconds, string msg)"
+  ],
+  "sourceLine": 615
+ },
+ {
+  "name": "osRegionNotice",
+  "signatures": [
+   "public void osRegionNotice(string msg)",
+   "public void osRegionNotice(LSL_Key agentID, string msg)"
+  ],
+  "sourceLine": 686
+ },
+ {
+  "name": "osSetRot",
+  "signatures": [
+   "public void osSetRot(UUID target, Quaternion rotation)"
+  ],
+  "sourceLine": 723
+ },
+ {
+  "name": "osSetDynamicTextureURL",
+  "signatures": [
+   "public string osSetDynamicTextureURL(string dynamicID, string contentType, string url, string extraParams,"
+  ],
+  "sourceLine": 743
+ },
+ {
+  "name": "osSetDynamicTextureURLBlend",
+  "signatures": [
+   "public string osSetDynamicTextureURLBlend(string dynamicID, string contentType, string url, string extraParams,"
+  ],
+  "sourceLine": 764
+ },
+ {
+  "name": "osSetDynamicTextureURLBlendFace",
+  "signatures": [
+   "public string osSetDynamicTextureURLBlendFace(string dynamicID, string contentType, string url, string extraParams,"
+  ],
+  "sourceLine": 785
+ },
+ {
+  "name": "osSetDynamicTextureData",
+  "signatures": [
+   "public string osSetDynamicTextureData(string dynamicID, string contentType, string data, string extraParams,"
+  ],
+  "sourceLine": 806
+ },
+ {
+  "name": "osSetDynamicTextureDataFace",
+  "signatures": [
+   "public string osSetDynamicTextureDataFace(string dynamicID, string contentType, string data, string extraParams,"
+  ],
+  "sourceLine": 812
+ },
+ {
+  "name": "osSetDynamicTextureDataBlend",
+  "signatures": [
+   "public string osSetDynamicTextureDataBlend(string dynamicID, string contentType, string data, string extraParams,"
+  ],
+  "sourceLine": 841
+ },
+ {
+  "name": "osSetDynamicTextureDataBlendFace",
+  "signatures": [
+   "public string osSetDynamicTextureDataBlendFace(string dynamicID, string contentType, string data, string extraParams,"
+  ],
+  "sourceLine": 869
+ },
+ {
+  "name": "osConsoleCommand",
+  "signatures": [
+   "public bool osConsoleCommand(string command)"
+  ],
+  "sourceLine": 897
+ },
+ {
+  "name": "osSetPrimFloatOnWater",
+  "signatures": [
+   "public void osSetPrimFloatOnWater(int floatYN)"
+  ],
+  "sourceLine": 911
+ },
+ {
+  "name": "osLocalTeleportAgent",
+  "signatures": [
+   "public void osLocalTeleportAgent(LSL_Key agent, LSL_Types.Vector3 position, LSL_Types.Vector3 velocity, LSL_Types.Vector3 lookat, LSL_Integer flags)"
+  ],
+  "sourceLine": 958
+ },
+ {
+  "name": "osTeleportAgent",
+  "signatures": [
+   "public void osTeleportAgent(string agent, string regionName, LSL_Types.Vector3 position, LSL_Types.Vector3 lookat)",
+   "public void osTeleportAgent(string agent, int regionGridX, int regionGridY, LSL_Types.Vector3 position, LSL_Types.Vector3 lookat)",
+   "public void osTeleportAgent(string agent, LSL_Types.Vector3 position, LSL_Types.Vector3 lookat)"
+  ],
+  "sourceLine": 974
+ },
+ {
+  "name": "osTeleportOwner",
+  "signatures": [
+   "public void osTeleportOwner(string regionName, LSL_Types.Vector3 position, LSL_Types.Vector3 lookat)",
+   "public void osTeleportOwner(int regionGridX, int regionGridY, LSL_Types.Vector3 position, LSL_Types.Vector3 lookat)",
+   "public void osTeleportOwner(LSL_Types.Vector3 position, LSL_Types.Vector3 lookat)"
+  ],
+  "sourceLine": 1099
+ },
+ {
+  "name": "osForceOtherSit",
+  "signatures": [
+   "public void osForceOtherSit(string avatar)",
+   "public void osForceOtherSit(string avatar, string target)"
+  ],
+  "sourceLine": 1128
+ },
+ {
+  "name": "osGetAgents",
+  "signatures": [
+   "public LSL_List osGetAgents()"
+  ],
+  "sourceLine": 1167
+ },
+ {
+  "name": "osGetAgentIP",
+  "signatures": [
+   "public string osGetAgentIP(string agent)"
+  ],
+  "sourceLine": 1181
+ },
+ {
+  "name": "osAvatarPlayAnimation",
+  "signatures": [
+   "public void osAvatarPlayAnimation(LSL_Key avatar, string animation)"
+  ],
+  "sourceLine": 1200
+ },
+ {
+  "name": "osAvatarStopAnimation",
+  "signatures": [
+   "public void osAvatarStopAnimation(LSL_Key avatar, string animation)"
+  ],
+  "sourceLine": 1232
+ },
+ {
+  "name": "osDrawResetTransform",
+  "signatures": [
+   "public string osDrawResetTransform(string drawList)"
+  ],
+  "sourceLine": 1260
+ },
+ {
+  "name": "osDrawRotationTransform",
+  "signatures": [
+   "public string osDrawRotationTransform(string drawList, LSL_Float x)"
+  ],
+  "sourceLine": 1268
+ },
+ {
+  "name": "osDrawScaleTransform",
+  "signatures": [
+   "public string osDrawScaleTransform(string drawList, LSL_Float x, LSL_Float y)"
+  ],
+  "sourceLine": 1276
+ },
+ {
+  "name": "osDrawTranslationTransform",
+  "signatures": [
+   "public string osDrawTranslationTransform(string drawList, LSL_Float x, LSL_Float y)"
+  ],
+  "sourceLine": 1284
+ },
+ {
+  "name": "osMovePen",
+  "signatures": [
+   "public string osMovePen(string drawList, int x, int y)"
+  ],
+  "sourceLine": 1292
+ },
+ {
+  "name": "osDrawLine",
+  "signatures": [
+   "public string osDrawLine(string drawList, int startX, int startY, int endX, int endY)",
+   "public string osDrawLine(string drawList, int endX, int endY)"
+  ],
+  "sourceLine": 1300
+ },
+ {
+  "name": "osDrawText",
+  "signatures": [
+   "public string osDrawText(string drawList, string text)"
+  ],
+  "sourceLine": 1316
+ },
+ {
+  "name": "osDrawEllipse",
+  "signatures": [
+   "public string osDrawEllipse(string drawList, int width, int height)"
+  ],
+  "sourceLine": 1324
+ },
+ {
+  "name": "osDrawFilledEllipse",
+  "signatures": [
+   "public string osDrawFilledEllipse(string drawList, int width, int height)"
+  ],
+  "sourceLine": 1332
+ },
+ {
+  "name": "osDrawRectangle",
+  "signatures": [
+   "public string osDrawRectangle(string drawList, int width, int height)"
+  ],
+  "sourceLine": 1340
+ },
+ {
+  "name": "osDrawFilledRectangle",
+  "signatures": [
+   "public string osDrawFilledRectangle(string drawList, int width, int height)"
+  ],
+  "sourceLine": 1348
+ },
+ {
+  "name": "osDrawFilledPolygon",
+  "signatures": [
+   "public string osDrawFilledPolygon(string drawList, LSL_List x, LSL_List y)"
+  ],
+  "sourceLine": 1356
+ },
+ {
+  "name": "osDrawPolygon",
+  "signatures": [
+   "public string osDrawPolygon(string drawList, LSL_List x, LSL_List y)"
+  ],
+  "sourceLine": 1373
+ },
+ {
+  "name": "osSetFontSize",
+  "signatures": [
+   "public string osSetFontSize(string drawList, int fontSize)"
+  ],
+  "sourceLine": 1390
+ },
+ {
+  "name": "osSetFontName",
+  "signatures": [
+   "public string osSetFontName(string drawList, string fontName)"
+  ],
+  "sourceLine": 1398
+ },
+ {
+  "name": "osSetPenSize",
+  "signatures": [
+   "public string osSetPenSize(string drawList, int penSize)"
+  ],
+  "sourceLine": 1406
+ },
+ {
+  "name": "osSetPenColor",
+  "signatures": [
+   "public string osSetPenColor(string drawList, string color)",
+   "public string osSetPenColor(string drawList, LSL_Types.Vector3 color)",
+   "public string osSetPenColor(string drawList, LSL_Types.Vector3 color, LSL_Float alpha)"
+  ],
+  "sourceLine": 1414
+ },
+ {
+  "name": "osSetPenColour",
+  "signatures": [
+   "public string osSetPenColour(string drawList, string colour)"
+  ],
+  "sourceLine": 1471
+ },
+ {
+  "name": "osSetPenCap",
+  "signatures": [
+   "public string osSetPenCap(string drawList, string direction, string type)"
+  ],
+  "sourceLine": 1480
+ },
+ {
+  "name": "osDrawImage",
+  "signatures": [
+   "public string osDrawImage(string drawList, int width, int height, string imageUrl)"
+  ],
+  "sourceLine": 1488
+ },
+ {
+  "name": "osGetDrawStringSize",
+  "signatures": [
+   "public LSL_Vector osGetDrawStringSize(string contentType, string text, string fontName, int fontSize)"
+  ],
+  "sourceLine": 1496
+ },
+ {
+  "name": "osSetRegionWaterHeight",
+  "signatures": [
+   "public void osSetRegionWaterHeight(double height)"
+  ],
+  "sourceLine": 1510
+ },
+ {
+  "name": "osSetRegionSunSettings",
+  "signatures": [
+   "public void osSetRegionSunSettings(bool useEstateSun, bool sunFixed, double sunHour)"
+  ],
+  "sourceLine": 1523
+ },
+ {
+  "name": "osSetEstateSunSettings",
+  "signatures": [
+   "public void osSetEstateSunSettings(bool sunFixed, double sunHour)"
+  ],
+  "sourceLine": 1546
+ },
+ {
+  "name": "osGetCurrentSunHour",
+  "signatures": [
+   "public LSL_Float osGetCurrentSunHour()"
+  ],
+  "sourceLine": 1570
+ },
+ {
+  "name": "osGetApparentTime",
+  "signatures": [
+   "public LSL_Float osGetApparentTime()"
+  ],
+  "sourceLine": 1581
+ },
+ {
+  "name": "osGetApparentTimeString",
+  "signatures": [
+   "public LSL_String osGetApparentTimeString(LSL_Integer format24)"
+  ],
+  "sourceLine": 1613
+ },
+ {
+  "name": "osGetApparentRegionTime",
+  "signatures": [
+   "public LSL_Float osGetApparentRegionTime()"
+  ],
+  "sourceLine": 1624
+ },
+ {
+  "name": "osGetApparentRegionTimeString",
+  "signatures": [
+   "public LSL_String osGetApparentRegionTimeString(LSL_Integer format24)"
+  ],
+  "sourceLine": 1635
+ },
+ {
+  "name": "osSunGetParam",
+  "signatures": [
+   "public double osSunGetParam(string param)"
+  ],
+  "sourceLine": 1648
+ },
+ {
+  "name": "osGetSunParam",
+  "signatures": [
+   "public LSL_Float osGetSunParam(LSL_String param)"
+  ],
+  "sourceLine": 1655
+ },
+ {
+  "name": "osSunSetParam",
+  "signatures": [
+   "public void osSunSetParam(string param, double value)"
+  ],
+  "sourceLine": 1682
+ },
+ {
+  "name": "osSetSunParam",
+  "signatures": [
+   "public void osSetSunParam(string param, double value)"
+  ],
+  "sourceLine": 1689
+ },
+ {
+  "name": "osWindActiveModelPluginName",
+  "signatures": [
+   "public string osWindActiveModelPluginName()"
+  ],
+  "sourceLine": 1701
+ },
+ {
+  "name": "osSetWindParam",
+  "signatures": [
+   "public void osSetWindParam(string plugin, string param, LSL_Float value)"
+  ],
+  "sourceLine": 1714
+ },
+ {
+  "name": "osGetWindParam",
+  "signatures": [
+   "public LSL_Float osGetWindParam(string plugin, string param)"
+  ],
+  "sourceLine": 1729
+ },
+ {
+  "name": "osGetParcelDwell",
+  "signatures": [
+   "public LSL_Integer osGetParcelDwell(LSL_Vector pos)"
+  ],
+  "sourceLine": 1742
+ },
+ {
+  "name": "osParcelJoin",
+  "signatures": [
+   "public void osParcelJoin(LSL_Vector pos1, LSL_Vector pos2)"
+  ],
+  "sourceLine": 1753
+ },
+ {
+  "name": "osParcelSubdivide",
+  "signatures": [
+   "public void osParcelSubdivide(LSL_Vector pos1, LSL_Vector pos2)"
+  ],
+  "sourceLine": 1765
+ },
+ {
+  "name": "osParcelSetDetails",
+  "signatures": [
+   "public void osParcelSetDetails(LSL_Vector pos, LSL_List rules)"
+  ],
+  "sourceLine": 1777
+ },
+ {
+  "name": "osSetParcelDetails",
+  "signatures": [
+   "public void osSetParcelDetails(LSL_Vector pos, LSL_List rules)"
+  ],
+  "sourceLine": 1784
+ },
+ {
+  "name": "osSetParcelMusicURL",
+  "signatures": [
+   "public void osSetParcelMusicURL(LSL_String url)"
+  ],
+  "sourceLine": 1980
+ },
+ {
+  "name": "osSetParcelMediaURL",
+  "signatures": [
+   "public void osSetParcelMediaURL(LSL_String url)"
+  ],
+  "sourceLine": 1988
+ },
+ {
+  "name": "osSetParcelSIPAddress",
+  "signatures": [
+   "public void osSetParcelSIPAddress(string SIPAddress)"
+  ],
+  "sourceLine": 1996
+ },
+ {
+  "name": "osGetScriptEngineName",
+  "signatures": [
+   "public string osGetScriptEngineName()"
+  ],
+  "sourceLine": 2019
+ },
+ {
+  "name": "osCheckODE",
+  "signatures": [
+   "public LSL_Integer osCheckODE()"
+  ],
+  "sourceLine": 2048
+ },
+ {
+  "name": "osGetPhysicsEngineType",
+  "signatures": [
+   "public string osGetPhysicsEngineType()"
+  ],
+  "sourceLine": 2062
+ },
+ {
+  "name": "osGetPhysicsEngineName",
+  "signatures": [
+   "public string osGetPhysicsEngineName()"
+  ],
+  "sourceLine": 2086
+ },
+ {
+  "name": "osGetSimulatorVersion",
+  "signatures": [
+   "public string osGetSimulatorVersion()"
+  ],
+  "sourceLine": 2100
+ },
+ {
+  "name": "osMessageObject",
+  "signatures": [
+   "public void osMessageObject(LSL_Key objectUUID, string message)"
+  ],
+  "sourceLine": 2121
+ },
+ {
+  "name": "osDie",
+  "signatures": [
+   "public void osDie(LSL_Key objectUUID)"
+  ],
+  "sourceLine": 2158
+ },
+ {
+  "name": "osMakeNotecard",
+  "signatures": [
+   "public void osMakeNotecard(string notecardName, LSL_String contents)",
+   "public void osMakeNotecard(string notecardName, LSL_List contents)"
+  ],
+  "sourceLine": 2198
+ },
+ {
+  "name": "osGetNotecardLine",
+  "signatures": [
+   "public string osGetNotecardLine(string name, int line)"
+  ],
+  "sourceLine": 2383
+ },
+ {
+  "name": "osGetNotecard",
+  "signatures": [
+   "public string osGetNotecard(string name)"
+  ],
+  "sourceLine": 2410
+ },
+ {
+  "name": "osGetNumberOfNotecardLines",
+  "signatures": [
+   "public int osGetNumberOfNotecardLines(string name)"
+  ],
+  "sourceLine": 2439
+ },
+ {
+  "name": "osAvatarName2Key",
+  "signatures": [
+   "public string osAvatarName2Key(string firstname, string lastname)"
+  ],
+  "sourceLine": 2454
+ },
+ {
+  "name": "osKey2Name",
+  "signatures": [
+   "public string osKey2Name(string id)"
+  ],
+  "sourceLine": 2500
+ },
+ {
+  "name": "osSHA256",
+  "signatures": [
+   "public string osSHA256(string input)"
+  ],
+  "sourceLine": 2579
+ },
+ {
+  "name": "osGetGridNick",
+  "signatures": [
+   "public string osGetGridNick()"
+  ],
+  "sourceLine": 2597
+ },
+ {
+  "name": "osGetGridName",
+  "signatures": [
+   "public string osGetGridName()"
+  ],
+  "sourceLine": 2602
+ },
+ {
+  "name": "osGetGridLoginURI",
+  "signatures": [
+   "public string osGetGridLoginURI()"
+  ],
+  "sourceLine": 2607
+ },
+ {
+  "name": "osGetGridHomeURI",
+  "signatures": [
+   "public string osGetGridHomeURI()"
+  ],
+  "sourceLine": 2623
+ },
+ {
+  "name": "osGetGridGatekeeperURI",
+  "signatures": [
+   "public string osGetGridGatekeeperURI()"
+  ],
+  "sourceLine": 2630
+ },
+ {
+  "name": "osGetGridCustom",
+  "signatures": [
+   "public string osGetGridCustom(string key)"
+  ],
+  "sourceLine": 2637
+ },
+ {
+  "name": "osGetAvatarHomeURI",
+  "signatures": [
+   "public string osGetAvatarHomeURI(string uuid)"
+  ],
+  "sourceLine": 2653
+ },
+ {
+  "name": "osFormatString",
+  "signatures": [
+   "public LSL_String osFormatString(string str, LSL_List strings)"
+  ],
+  "sourceLine": 2671
+ },
+ {
+  "name": "osMatchString",
+  "signatures": [
+   "public LSL_List osMatchString(string src, string pattern, int start)"
+  ],
+  "sourceLine": 2678
+ },
+ {
+  "name": "osReplaceString",
+  "signatures": [
+   "public LSL_String osReplaceString(string src, string pattern, string replace, int count, int start)"
+  ],
+  "sourceLine": 2719
+ },
+ {
+  "name": "osLoadedCreationDate",
+  "signatures": [
+   "public string osLoadedCreationDate()"
+  ],
+  "sourceLine": 2743
+ },
+ {
+  "name": "osLoadedCreationTime",
+  "signatures": [
+   "public string osLoadedCreationTime()"
+  ],
+  "sourceLine": 2750
+ },
+ {
+  "name": "osLoadedCreationID",
+  "signatures": [
+   "public string osLoadedCreationID()"
+  ],
+  "sourceLine": 2757
+ },
+ {
+  "name": "osGetLinkPrimitiveParams",
+  "signatures": [
+   "public LSL_List osGetLinkPrimitiveParams(int linknumber, LSL_List rules)"
+  ],
+  "sourceLine": 2777
+ },
+ {
+  "name": "osForceCreateLink",
+  "signatures": [
+   "public void osForceCreateLink(string target, int parent)"
+  ],
+  "sourceLine": 2806
+ },
+ {
+  "name": "osForceBreakLink",
+  "signatures": [
+   "public void osForceBreakLink(int linknum)"
+  ],
+  "sourceLine": 2814
+ },
+ {
+  "name": "osForceBreakAllLinks",
+  "signatures": [
+   "public void osForceBreakAllLinks()"
+  ],
+  "sourceLine": 2822
+ },
+ {
+  "name": "osIsNpc",
+  "signatures": [
+   "public LSL_Integer osIsNpc(LSL_Key npc)"
+  ],
+  "sourceLine": 2830
+ },
+ {
+  "name": "osNpcCreate",
+  "signatures": [
+   "public LSL_Key osNpcCreate(string firstname, string lastname, LSL_Vector position, string notecard)",
+   "public LSL_Key osNpcCreate(string firstname, string lastname, LSL_Vector position, string notecard, int options)"
+  ],
+  "sourceLine": 2845
+ },
+ {
+  "name": "osNpcSaveAppearance",
+  "signatures": [
+   "public LSL_Key osNpcSaveAppearance(LSL_Key npc, LSL_String notecard)",
+   "public LSL_Key osNpcSaveAppearance(LSL_Key npc, LSL_String notecard, LSL_Integer includeHuds)"
+  ],
+  "sourceLine": 2997
+ },
+ {
+  "name": "osNpcLoadAppearance",
+  "signatures": [
+   "public void osNpcLoadAppearance(LSL_Key npc, string notecard)"
+  ],
+  "sourceLine": 3027
+ },
+ {
+  "name": "osNpcGetOwner",
+  "signatures": [
+   "public LSL_Key osNpcGetOwner(LSL_Key npc)"
+  ],
+  "sourceLine": 3057
+ },
+ {
+  "name": "osNpcGetPos",
+  "signatures": [
+   "public LSL_Vector osNpcGetPos(LSL_Key npc)"
+  ],
+  "sourceLine": 3077
+ },
+ {
+  "name": "osNpcMoveTo",
+  "signatures": [
+   "public void osNpcMoveTo(LSL_Key npc, LSL_Vector pos)"
+  ],
+  "sourceLine": 3099
+ },
+ {
+  "name": "osNpcMoveToTarget",
+  "signatures": [
+   "public void osNpcMoveToTarget(LSL_Key npc, LSL_Vector target, int options)"
+  ],
+  "sourceLine": 3116
+ },
+ {
+  "name": "osNpcGetRot",
+  "signatures": [
+   "public LSL_Rotation osNpcGetRot(LSL_Key npc)"
+  ],
+  "sourceLine": 3139
+ },
+ {
+  "name": "osNpcSetRot",
+  "signatures": [
+   "public void osNpcSetRot(LSL_Key npc, LSL_Rotation rotation)"
+  ],
+  "sourceLine": 3161
+ },
+ {
+  "name": "osNpcStopMoveToTarget",
+  "signatures": [
+   "public void osNpcStopMoveToTarget(LSL_Key npc)"
+  ],
+  "sourceLine": 3180
+ },
+ {
+  "name": "osNpcSetProfileAbout",
+  "signatures": [
+   "public void osNpcSetProfileAbout(LSL_Key npc, string about)"
+  ],
+  "sourceLine": 3196
+ },
+ {
+  "name": "osNpcSetProfileImage",
+  "signatures": [
+   "public void osNpcSetProfileImage(LSL_Key npc, string image)"
+  ],
+  "sourceLine": 3214
+ },
+ {
+  "name": "osNpcSay",
+  "signatures": [
+   "public void osNpcSay(LSL_Key npc, string message)",
+   "public void osNpcSay(LSL_Key npc, int channel, string message)"
+  ],
+  "sourceLine": 3239
+ },
+ {
+  "name": "osNpcSayTo",
+  "signatures": [
+   "public void osNpcSayTo(LSL_Key npc, LSL_Key target, int channel, string msg)"
+  ],
+  "sourceLine": 3262
+ },
+ {
+  "name": "osNpcShout",
+  "signatures": [
+   "public void osNpcShout(LSL_Key npc, int channel, string message)"
+  ],
+  "sourceLine": 3294
+ },
+ {
+  "name": "osNpcSit",
+  "signatures": [
+   "public void osNpcSit(LSL_Key npc, LSL_Key target, int options)"
+  ],
+  "sourceLine": 3312
+ },
+ {
+  "name": "osNpcStand",
+  "signatures": [
+   "public void osNpcStand(LSL_Key npc)"
+  ],
+  "sourceLine": 3328
+ },
+ {
+  "name": "osNpcRemove",
+  "signatures": [
+   "public void osNpcRemove(LSL_Key npc)"
+  ],
+  "sourceLine": 3344
+ },
+ {
+  "name": "osNpcPlayAnimation",
+  "signatures": [
+   "public void osNpcPlayAnimation(LSL_Key npc, string animation)"
+  ],
+  "sourceLine": 3364
+ },
+ {
+  "name": "osNpcStopAnimation",
+  "signatures": [
+   "public void osNpcStopAnimation(LSL_Key npc, string animation)"
+  ],
+  "sourceLine": 3403
+ },
+ {
+  "name": "osNpcWhisper",
+  "signatures": [
+   "public void osNpcWhisper(LSL_Key npc, int channel, string message)"
+  ],
+  "sourceLine": 3439
+ },
+ {
+  "name": "osNpcTouch",
+  "signatures": [
+   "public void osNpcTouch(LSL_Key npcLSL_Key, LSL_Key object_key, LSL_Integer link_num)"
+  ],
+  "sourceLine": 3455
+ },
+ {
+  "name": "osOwnerSaveAppearance",
+  "signatures": [
+   "public LSL_Key osOwnerSaveAppearance(LSL_String notecard)",
+   "public LSL_Key osOwnerSaveAppearance(LSL_String notecard, LSL_Integer includeHuds)"
+  ],
+  "sourceLine": 3497
+ },
+ {
+  "name": "osAgentSaveAppearance",
+  "signatures": [
+   "public LSL_Key osAgentSaveAppearance(LSL_Key avatarKey, LSL_String notecard)",
+   "public LSL_Key osAgentSaveAppearance(LSL_Key avatarKey, LSL_String notecard, LSL_Integer includeHuds)"
+  ],
+  "sourceLine": 3511
+ },
+ {
+  "name": "osGetGender",
+  "signatures": [
+   "public LSL_String osGetGender(LSL_Key rawAvatarId)"
+  ],
+  "sourceLine": 3562
+ },
+ {
+  "name": "osGetMapTexture",
+  "signatures": [
+   "public LSL_Key osGetMapTexture()"
+  ],
+  "sourceLine": 3604
+ },
+ {
+  "name": "osGetRegionMapTexture",
+  "signatures": [
+   "public LSL_Key osGetRegionMapTexture(string regionNameOrID)"
+  ],
+  "sourceLine": 3616
+ },
+ {
+  "name": "osGetRegionStats",
+  "signatures": [
+   "public LSL_List osGetRegionStats()"
+  ],
+  "sourceLine": 3648
+ },
+ {
+  "name": "osGetRegionSize",
+  "signatures": [
+   "public LSL_Vector osGetRegionSize()"
+  ],
+  "sourceLine": 3662
+ },
+ {
+  "name": "osGetSimulatorMemory",
+  "signatures": [
+   "public int osGetSimulatorMemory()"
+  ],
+  "sourceLine": 3673
+ },
+ {
+  "name": "osGetSimulatorMemoryKB",
+  "signatures": [
+   "public int osGetSimulatorMemoryKB()"
+  ],
+  "sourceLine": 3687
+ },
+ {
+  "name": "osSetSpeed",
+  "signatures": [
+   "public void osSetSpeed(string ID, LSL_Float SpeedModifier)"
+  ],
+  "sourceLine": 3703
+ },
+ {
+  "name": "osSetOwnerSpeed",
+  "signatures": [
+   "public void osSetOwnerSpeed(LSL_Float SpeedModifier)"
+  ],
+  "sourceLine": 3715
+ },
+ {
+  "name": "osKickAvatar",
+  "signatures": [
+   "public void osKickAvatar(string FirstName, string SurName, string alert)",
+   "public void osKickAvatar(LSL_Key agentKey, string alert)"
+  ],
+  "sourceLine": 3727
+ },
+ {
+  "name": "osGetHealth",
+  "signatures": [
+   "public LSL_Float osGetHealth(LSL_Key agentKey)"
+  ],
+  "sourceLine": 3771
+ },
+ {
+  "name": "osCauseDamage",
+  "signatures": [
+   "public void osCauseDamage(LSL_Key avatar, LSL_Float damage)"
+  ],
+  "sourceLine": 3786
+ },
+ {
+  "name": "osCauseHealing",
+  "signatures": [
+   "public void osCauseHealing(LSL_Key avatar, LSL_Float healing)"
+  ],
+  "sourceLine": 3822
+ },
+ {
+  "name": "osSetHealth",
+  "signatures": [
+   "public void osSetHealth(LSL_Key avatar, LSL_Float health)"
+  ],
+  "sourceLine": 3842
+ },
+ {
+  "name": "osSetHealRate",
+  "signatures": [
+   "public void osSetHealRate(LSL_Key avatar, LSL_Float healrate)"
+  ],
+  "sourceLine": 3862
+ },
+ {
+  "name": "osGetHealRate",
+  "signatures": [
+   "public LSL_Float osGetHealRate(LSL_Key avatar)"
+  ],
+  "sourceLine": 3876
+ },
+ {
+  "name": "osGetPrimitiveParams",
+  "signatures": [
+   "public LSL_List osGetPrimitiveParams(LSL_Key prim, LSL_List rules)"
+  ],
+  "sourceLine": 3891
+ },
+ {
+  "name": "osSetPrimitiveParams",
+  "signatures": [
+   "public void osSetPrimitiveParams(LSL_Key prim, LSL_List rules)"
+  ],
+  "sourceLine": 3899
+ },
+ {
+  "name": "osSetProjectionParams",
+  "signatures": [
+   "public void osSetProjectionParams(LSL_Integer projection, LSL_Key texture, LSL_Float fov, LSL_Float focus, LSL_Float amb)",
+   "public void osSetProjectionParams(LSL_Integer linknum, LSL_Integer projection, LSL_Key texture, LSL_Float fov, LSL_Float focus, LSL_Float amb)",
+   "public void osSetProjectionParams(LSL_Key prim, LSL_Integer llprojection, LSL_Key texture, LSL_Float fov, LSL_Float focus, LSL_Float amb)"
+  ],
+  "sourceLine": 3910
+ },
+ {
+  "name": "osGetAvatarList",
+  "signatures": [
+   "public LSL_List osGetAvatarList()"
+  ],
+  "sourceLine": 3992
+ },
+ {
+  "name": "osGetNPCList",
+  "signatures": [
+   "public LSL_List osGetNPCList()"
+  ],
+  "sourceLine": 4010
+ },
+ {
+  "name": "osUnixTimeToTimestamp",
+  "signatures": [
+   "public LSL_String osUnixTimeToTimestamp(LSL_Integer time)"
+  ],
+  "sourceLine": 4034
+ },
+ {
+  "name": "osInviteToGroup",
+  "signatures": [
+   "public LSL_Integer osInviteToGroup(LSL_Key agentId)"
+  ],
+  "sourceLine": 4044
+ },
+ {
+  "name": "osEjectFromGroup",
+  "signatures": [
+   "public LSL_Integer osEjectFromGroup(LSL_Key agentId)"
+  ],
+  "sourceLine": 4082
+ },
+ {
+  "name": "osSetTerrainTexture",
+  "signatures": [
+   "public void osSetTerrainTexture(int level, LSL_Key texture)"
+  ],
+  "sourceLine": 4113
+ },
+ {
+  "name": "osSetTerrainTextures",
+  "signatures": [
+   "public void osSetTerrainTextures(LSL_List textures, LSL_Integer ltypes)"
+  ],
+  "sourceLine": 4139
+ },
+ {
+  "name": "osSetTerrainTextureHeight",
+  "signatures": [
+   "public void osSetTerrainTextureHeight(int corner, double low, double high)"
+  ],
+  "sourceLine": 4199
+ },
+ {
+  "name": "osForceAttachToAvatar",
+  "signatures": [
+   "public void osForceAttachToAvatar(int attachmentPoint)"
+  ],
+  "sourceLine": 4215
+ },
+ {
+  "name": "osForceAttachToAvatarFromInventory",
+  "signatures": [
+   "public void osForceAttachToAvatarFromInventory(string itemName, int attachmentPoint)"
+  ],
+  "sourceLine": 4223
+ },
+ {
+  "name": "osForceAttachToOtherAvatarFromInventory",
+  "signatures": [
+   "public void osForceAttachToOtherAvatarFromInventory(string rawAvatarId, string itemName, int attachmentPoint)"
+  ],
+  "sourceLine": 4230
+ },
+ {
+  "name": "osForceDetachFromAvatar",
+  "signatures": [
+   "public void osForceDetachFromAvatar()"
+  ],
+  "sourceLine": 4285
+ },
+ {
+  "name": "osGetNumberOfAttachments",
+  "signatures": [
+   "public LSL_List osGetNumberOfAttachments(LSL_Key avatar, LSL_List attachmentPoints)"
+  ],
+  "sourceLine": 4321
+ },
+ {
+  "name": "osMessageAttachments",
+  "signatures": [
+   "public void osMessageAttachments(LSL_Key avatar, string message, LSL_List attachmentPoints, int options)"
+  ],
+  "sourceLine": 4351
+ },
+ {
+  "name": "osIsUUID",
+  "signatures": [
+   "public LSL_Integer osIsUUID(string thing)"
+  ],
+  "sourceLine": 4456
+ },
+ {
+  "name": "osMin",
+  "signatures": [
+   "public LSL_Float osMin(double a, double b)"
+  ],
+  "sourceLine": 4467
+ },
+ {
+  "name": "osMax",
+  "signatures": [
+   "public LSL_Float osMax(double a, double b)"
+  ],
+  "sourceLine": 4478
+ },
+ {
+  "name": "osGetRezzingObject",
+  "signatures": [
+   "public LSL_Key osGetRezzingObject()"
+  ],
+  "sourceLine": 4483
+ },
+ {
+  "name": "osSetContentType",
+  "signatures": [
+   "public void osSetContentType(LSL_Key id, string type)"
+  ],
+  "sourceLine": 4497
+ },
+ {
+  "name": "osDropAttachment",
+  "signatures": [
+   "public void osDropAttachment()"
+  ],
+  "sourceLine": 4552
+ },
+ {
+  "name": "osForceDropAttachment",
+  "signatures": [
+   "public void osForceDropAttachment()"
+  ],
+  "sourceLine": 4559
+ },
+ {
+  "name": "osDropAttachmentAt",
+  "signatures": [
+   "public void osDropAttachmentAt(LSL_Vector pos, LSL_Rotation rot)"
+  ],
+  "sourceLine": 4566
+ },
+ {
+  "name": "osForceDropAttachmentAt",
+  "signatures": [
+   "public void osForceDropAttachmentAt(LSL_Vector pos, LSL_Rotation rot)"
+  ],
+  "sourceLine": 4573
+ },
+ {
+  "name": "osListenRegex",
+  "signatures": [
+   "public LSL_Integer osListenRegex(int channelID, string name, string ID, string msg, int regexBitfield)"
+  ],
+  "sourceLine": 4580
+ },
+ {
+  "name": "osRegexIsMatch",
+  "signatures": [
+   "public LSL_Integer osRegexIsMatch(string input, string pattern)"
+  ],
+  "sourceLine": 4622
+ },
+ {
+  "name": "osRequestURL",
+  "signatures": [
+   "public LSL_Key osRequestURL(LSL_List options)"
+  ],
+  "sourceLine": 4637
+ },
+ {
+  "name": "osRequestSecureURL",
+  "signatures": [
+   "public LSL_Key osRequestSecureURL(LSL_List options)"
+  ],
+  "sourceLine": 4655
+ },
+ {
+  "name": "osCollisionSound",
+  "signatures": [
+   "public void osCollisionSound(string impact_sound, double impact_volume)"
+  ],
+  "sourceLine": 4672
+ },
+ {
+  "name": "osVolumeDetect",
+  "signatures": [
+   "public void osVolumeDetect(int detect)"
+  ],
+  "sourceLine": 4704
+ },
+ {
+  "name": "osGetInertiaData",
+  "signatures": [
+   "public LSL_List osGetInertiaData()"
+  ],
+  "sourceLine": 4726
+ },
+ {
+  "name": "osSetInertia",
+  "signatures": [
+   "public void osSetInertia(LSL_Float mass, LSL_Vector centerOfMass, LSL_Vector principalInertiaScaled,  LSL_Rotation lslrot)"
+  ],
+  "sourceLine": 4769
+ },
+ {
+  "name": "osSetInertiaAsBox",
+  "signatures": [
+   "public void osSetInertiaAsBox(LSL_Float mass, LSL_Vector boxSize, LSL_Vector centerOfMass, LSL_Rotation lslrot)"
+  ],
+  "sourceLine": 4807
+ },
+ {
+  "name": "osSetInertiaAsSphere",
+  "signatures": [
+   "public void osSetInertiaAsSphere(LSL_Float mass,  LSL_Float radius, LSL_Vector centerOfMass)"
+  ],
+  "sourceLine": 4847
+ },
+ {
+  "name": "osSetInertiaAsCylinder",
+  "signatures": [
+   "public void osSetInertiaAsCylinder(LSL_Float mass,  LSL_Float radius, LSL_Float length, LSL_Vector centerOfMass, LSL_Rotation lslrot)"
+  ],
+  "sourceLine": 4882
+ },
+ {
+  "name": "osClearInertia",
+  "signatures": [
+   "public void osClearInertia()"
+  ],
+  "sourceLine": 4918
+ },
+ {
+  "name": "osTeleportObject",
+  "signatures": [
+   "public LSL_Integer osTeleportObject(LSL_Key objectUUID, LSL_Vector targetPos, LSL_Rotation rotation, LSL_Integer flags)"
+  ],
+  "sourceLine": 4976
+ },
+ {
+  "name": "osGetLinkNumber",
+  "signatures": [
+   "public LSL_Integer osGetLinkNumber(LSL_String name)"
+  ],
+  "sourceLine": 5001
+ },
+ {
+  "name": "osRound",
+  "signatures": [
+   "public LSL_Float osRound(LSL_Float value, LSL_Integer ndigits)"
+  ],
+  "sourceLine": 5012
+ },
+ {
+  "name": "osVecMagSquare",
+  "signatures": [
+   "public LSL_Float osVecMagSquare(LSL_Vector a)"
+  ],
+  "sourceLine": 5021
+ },
+ {
+  "name": "osVecDistSquare",
+  "signatures": [
+   "public LSL_Float osVecDistSquare(LSL_Vector a, LSL_Vector b)"
+  ],
+  "sourceLine": 5026
+ },
+ {
+  "name": "osAngleBetween",
+  "signatures": [
+   "public LSL_Float osAngleBetween(LSL_Vector a, LSL_Vector b)"
+  ],
+  "sourceLine": 5032
+ },
+ {
+  "name": "osAdjustSoundVolume",
+  "signatures": [
+   "public void osAdjustSoundVolume(LSL_Integer linknum, LSL_Float volume)"
+  ],
+  "sourceLine": 5039
+ },
+ {
+  "name": "osSetSoundRadius",
+  "signatures": [
+   "public void osSetSoundRadius(LSL_Integer linknum, LSL_Float radius)"
+  ],
+  "sourceLine": 5045
+ },
+ {
+  "name": "osPlaySound",
+  "signatures": [
+   "public void osPlaySound(LSL_Integer linknum, LSL_String sound, LSL_Float volume)"
+  ],
+  "sourceLine": 5052
+ },
+ {
+  "name": "osLoopSound",
+  "signatures": [
+   "public void osLoopSound(LSL_Integer linknum, LSL_String sound, LSL_Float volume)"
+  ],
+  "sourceLine": 5069
+ },
+ {
+  "name": "osLoopSoundMaster",
+  "signatures": [
+   "public void osLoopSoundMaster(LSL_Integer linknum, LSL_String sound, LSL_Float volume)"
+  ],
+  "sourceLine": 5085
+ },
+ {
+  "name": "osLoopSoundSlave",
+  "signatures": [
+   "public void osLoopSoundSlave(LSL_Integer linknum, LSL_String sound, LSL_Float volume)"
+  ],
+  "sourceLine": 5101
+ },
+ {
+  "name": "osPlaySoundSlave",
+  "signatures": [
+   "public void osPlaySoundSlave(LSL_Integer linknum, LSL_String sound, LSL_Float volume)"
+  ],
+  "sourceLine": 5115
+ },
+ {
+  "name": "osTriggerSound",
+  "signatures": [
+   "public void osTriggerSound(LSL_Integer linknum, LSL_String sound, LSL_Float volume)"
+  ],
+  "sourceLine": 5129
+ },
+ {
+  "name": "osTriggerSoundLimited",
+  "signatures": [
+   "public void osTriggerSoundLimited(LSL_Integer linknum, LSL_String sound, LSL_Float volume,"
+  ],
+  "sourceLine": 5143
+ },
+ {
+  "name": "osStopSound",
+  "signatures": [
+   "public void osStopSound(LSL_Integer linknum)"
+  ],
+  "sourceLine": 5159
+ },
+ {
+  "name": "osPreloadSound",
+  "signatures": [
+   "public void osPreloadSound(LSL_Integer linknum, LSL_String sound)"
+  ],
+  "sourceLine": 5172
+ },
+ {
+  "name": "osDetectedCountry",
+  "signatures": [
+   "public LSL_String osDetectedCountry(LSL_Integer number)"
+  ],
+  "sourceLine": 5222
+ },
+ {
+  "name": "osGetAgentCountry",
+  "signatures": [
+   "public LSL_String osGetAgentCountry(LSL_Key id)"
+  ],
+  "sourceLine": 5238
+ },
+ {
+  "name": "osStringSubString",
+  "signatures": [
+   "public LSL_String osStringSubString(LSL_String src, LSL_Integer offset)",
+   "public LSL_String osStringSubString(LSL_String src, LSL_Integer offset, LSL_Integer length)"
+  ],
+  "sourceLine": 5262
+ },
+ {
+  "name": "osStringStartsWith",
+  "signatures": [
+   "public LSL_Integer osStringStartsWith(LSL_String src, LSL_String value, LSL_Integer ignorecase)"
+  ],
+  "sourceLine": 5294
+ },
+ {
+  "name": "osStringEndsWith",
+  "signatures": [
+   "public LSL_Integer osStringEndsWith(LSL_String src, LSL_String value, LSL_Integer ignorecase)"
+  ],
+  "sourceLine": 5306
+ },
+ {
+  "name": "osStringIndexOf",
+  "signatures": [
+   "public LSL_Integer osStringIndexOf(LSL_String src, LSL_String value, LSL_Integer ignorecase)",
+   "public LSL_Integer osStringIndexOf(LSL_String src, LSL_String value,"
+  ],
+  "sourceLine": 5318
+ },
+ {
+  "name": "osStringLastIndexOf",
+  "signatures": [
+   "public LSL_Integer osStringLastIndexOf(LSL_String src, LSL_String value, LSL_Integer ignorecase)",
+   "public LSL_Integer osStringLastIndexOf(LSL_String src, LSL_String value,"
+  ],
+  "sourceLine": 5356
+ },
+ {
+  "name": "osStringRemove",
+  "signatures": [
+   "public LSL_String osStringRemove(LSL_String src, LSL_Integer offset, LSL_Integer count)"
+  ],
+  "sourceLine": 5394
+ },
+ {
+  "name": "osStringReplace",
+  "signatures": [
+   "public LSL_String osStringReplace(LSL_String src, LSL_String oldvalue, LSL_String newvalue)"
+  ],
+  "sourceLine": 5415
+ },
+ {
+  "name": "osApproxEquals",
+  "signatures": [
+   "public LSL_Integer osApproxEquals(LSL_Float a, LSL_Float b)",
+   "public LSL_Integer osApproxEquals(LSL_Float a, LSL_Float b, LSL_Float margin)",
+   "public LSL_Integer osApproxEquals(LSL_Vector va, LSL_Vector vb)",
+   "public LSL_Integer osApproxEquals(LSL_Vector va, LSL_Vector vb, LSL_Float margin)",
+   "public LSL_Integer osApproxEquals(LSL_Rotation ra, LSL_Rotation rb)",
+   "public LSL_Integer osApproxEquals(LSL_Rotation ra, LSL_Rotation rb, LSL_Float margin)"
+  ],
+  "sourceLine": 5427
+ },
+ {
+  "name": "osGetInventoryLastOwner",
+  "signatures": [
+   "public LSL_Key osGetInventoryLastOwner(LSL_String itemNameorid)"
+  ],
+  "sourceLine": 5524
+ },
+ {
+  "name": "osGetInventoryItemKey",
+  "signatures": [
+   "public LSL_Key osGetInventoryItemKey(LSL_String name)"
+  ],
+  "sourceLine": 5538
+ },
+ {
+  "name": "osGetInventoryName",
+  "signatures": [
+   "public LSL_String osGetInventoryName(LSL_Key itemId)"
+  ],
+  "sourceLine": 5554
+ },
+ {
+  "name": "osGetLinkInventoryName",
+  "signatures": [
+   "public LSL_String osGetLinkInventoryName(LSL_Integer linkNumber, LSL_Key itemId)"
+  ],
+  "sourceLine": 5563
+ },
+ {
+  "name": "osGetInventoryDesc",
+  "signatures": [
+   "public LSL_String osGetInventoryDesc(LSL_String itemNameorid)"
+  ],
+  "sourceLine": 5577
+ },
+ {
+  "name": "osGetLinkInventoryDesc",
+  "signatures": [
+   "public LSL_String osGetLinkInventoryDesc(LSL_Integer linkNumber, LSL_String itemNameorid)"
+  ],
+  "sourceLine": 5586
+ },
+ {
+  "name": "osGetLinkInventoryKey",
+  "signatures": [
+   "public LSL_Key osGetLinkInventoryKey(LSL_Integer linkNumber, LSL_String name, LSL_Integer type)"
+  ],
+  "sourceLine": 5599
+ },
+ {
+  "name": "osGetLinkInventoryKeys",
+  "signatures": [
+   "public LSL_List osGetLinkInventoryKeys(LSL_Integer linkNumber, LSL_Integer type)"
+  ],
+  "sourceLine": 5619
+ },
+ {
+  "name": "osGetLinkInventoryItemKey",
+  "signatures": [
+   "public LSL_Key osGetLinkInventoryItemKey(LSL_Integer linkNumber, LSL_String name)"
+  ],
+  "sourceLine": 5641
+ },
+ {
+  "name": "osGetInventoryItemKeys",
+  "signatures": [
+   "public LSL_List osGetInventoryItemKeys(LSL_Integer type)"
+  ],
+  "sourceLine": 5661
+ },
+ {
+  "name": "osGetLinkInventoryItemKeys",
+  "signatures": [
+   "public LSL_List osGetLinkInventoryItemKeys(LSL_Integer linkNumber, LSL_Integer type)"
+  ],
+  "sourceLine": 5678
+ },
+ {
+  "name": "osGetInventoryNames",
+  "signatures": [
+   "public LSL_List osGetInventoryNames(LSL_Integer type)"
+  ],
+  "sourceLine": 5700
+ },
+ {
+  "name": "osGetLinkInventoryNames",
+  "signatures": [
+   "public LSL_List osGetLinkInventoryNames(LSL_Integer linkNumber, LSL_Integer type)"
+  ],
+  "sourceLine": 5715
+ },
+ {
+  "name": "osRemoveLinkInventory",
+  "signatures": [
+   "public void osRemoveLinkInventory(LSL_Integer linkNumber, LSL_String name)"
+  ],
+  "sourceLine": 5734
+ },
+ {
+  "name": "osGiveLinkInventory",
+  "signatures": [
+   "public void osGiveLinkInventory(LSL_Integer linkNumber, LSL_Key destination, LSL_String inventory)"
+  ],
+  "sourceLine": 5757
+ },
+ {
+  "name": "osGiveLinkInventoryList",
+  "signatures": [
+   "public void osGiveLinkInventoryList(LSL_Integer linkNumber, LSL_Key destination, LSL_String folderName, LSL_List inventory)"
+  ],
+  "sourceLine": 5817
+ },
+ {
+  "name": "osGetLastChangedEventKey",
+  "signatures": [
+   "public LSL_Key osGetLastChangedEventKey()"
+  ],
+  "sourceLine": 5911
+ },
+ {
+  "name": "osGetPSTWallclock",
+  "signatures": [
+   "public LSL_Float osGetPSTWallclock()"
+  ],
+  "sourceLine": 5920
+ },
+ {
+  "name": "osSlerp",
+  "signatures": [
+   "public LSL_Rotation osSlerp(LSL_Rotation a, LSL_Rotation b, LSL_Float amount)",
+   "public LSL_Vector osSlerp(LSL_Vector a, LSL_Vector b, LSL_Float amount)"
+  ],
+  "sourceLine": 5929
+ },
+ {
+  "name": "osResetAllScripts",
+  "signatures": [
+   "public void osResetAllScripts(LSL_Integer linkset)"
+  ],
+  "sourceLine": 5951
+ },
+ {
+  "name": "osIsNotValidNumber",
+  "signatures": [
+   "public LSL_Integer osIsNotValidNumber(LSL_Float v)"
+  ],
+  "sourceLine": 5983
+ },
+ {
+  "name": "osGetSitTargetPos",
+  "signatures": [
+   "public LSL_Vector osGetSitTargetPos()"
+  ],
+  "sourceLine": 5995
+ },
+ {
+  "name": "osGetSitTargetRot",
+  "signatures": [
+   "public LSL_Rotation osGetSitTargetRot()"
+  ],
+  "sourceLine": 6000
+ },
+ {
+  "name": "osSetSitActiveRange",
+  "signatures": [
+   "public void osSetSitActiveRange(LSL_Float v)"
+  ],
+  "sourceLine": 6005
+ },
+ {
+  "name": "osSetLinkSitActiveRange",
+  "signatures": [
+   "public void osSetLinkSitActiveRange(LSL_Integer linkNumber, LSL_Float v)"
+  ],
+  "sourceLine": 6018
+ },
+ {
+  "name": "osGetSitActiveRange",
+  "signatures": [
+   "public LSL_Float osGetSitActiveRange()"
+  ],
+  "sourceLine": 6042
+ },
+ {
+  "name": "osGetLinkSitActiveRange",
+  "signatures": [
+   "public LSL_Float osGetLinkSitActiveRange(LSL_Integer linkNumber)"
+  ],
+  "sourceLine": 6047
+ },
+ {
+  "name": "osSetStandTarget",
+  "signatures": [
+   "public void osSetStandTarget(LSL_Vector v)"
+  ],
+  "sourceLine": 6061
+ },
+ {
+  "name": "osSetLinkStandTarget",
+  "signatures": [
+   "public void osSetLinkStandTarget(LSL_Integer linkNumber, LSL_Vector v)"
+  ],
+  "sourceLine": 6070
+ },
+ {
+  "name": "osGetStandTarget",
+  "signatures": [
+   "public LSL_Vector osGetStandTarget()"
+  ],
+  "sourceLine": 6094
+ },
+ {
+  "name": "osGetLinkStandTarget",
+  "signatures": [
+   "public LSL_Vector osGetLinkStandTarget(LSL_Integer linkNumber)"
+  ],
+  "sourceLine": 6099
+ },
+ {
+  "name": "osClearObjectAnimations",
+  "signatures": [
+   "public LSL_Integer osClearObjectAnimations()"
+  ],
+  "sourceLine": 6113
+ },
+ {
+  "name": "osReplaceAgentEnvironment",
+  "signatures": [
+   "public LSL_Integer osReplaceAgentEnvironment(LSL_Key agentkey, LSL_Integer transition, LSL_String daycycle)"
+  ],
+  "sourceLine": 6118
+ },
+ {
+  "name": "osReplaceParcelEnvironment",
+  "signatures": [
+   "public LSL_Integer osReplaceParcelEnvironment(LSL_Integer transition, LSL_String daycycle)"
+  ],
+  "sourceLine": 6163
+ },
+ {
+  "name": "osReplaceRegionEnvironment",
+  "signatures": [
+   "public LSL_Integer osReplaceRegionEnvironment(LSL_Integer transition, LSL_String daycycle,"
+  ],
+  "sourceLine": 6214
+ },
+ {
+  "name": "osResetEnvironment",
+  "signatures": [
+   "public LSL_Integer osResetEnvironment(LSL_Integer parcelOrRegion, LSL_Integer transition)"
+  ],
+  "sourceLine": 6294
+ },
+ {
+  "name": "osParticleSystem",
+  "signatures": [
+   "public void osParticleSystem(LSL_List rules)"
+  ],
+  "sourceLine": 6323
+ },
+ {
+  "name": "osLinkParticleSystem",
+  "signatures": [
+   "public void osLinkParticleSystem(LSL_Integer linknumber, LSL_List rules)"
+  ],
+  "sourceLine": 6329
+ },
+ {
+  "name": "osNpcLookAt",
+  "signatures": [
+   "public LSL_Integer osNpcLookAt(LSL_Key npckey, LSL_Integer ltype, LSL_Key objkey, LSL_Vector offset)"
+  ],
+  "sourceLine": 6340
+ },
+ {
+  "name": "osAvatarType",
+  "signatures": [
+   "public LSL_Integer osAvatarType(LSL_Key avkey)",
+   "public LSL_Integer osAvatarType(LSL_String sFirstName, LSL_String sLastName)"
+  ],
+  "sourceLine": 6401
+ },
+ {
+  "name": "osListSortInPlace",
+  "signatures": [
+   "public void osListSortInPlace(LSL_List src, LSL_Integer stride, LSL_Integer ascending)"
+  ],
+  "sourceLine": 6422
+ },
+ {
+  "name": "osListSortInPlaceStrided",
+  "signatures": [
+   "public void osListSortInPlaceStrided(LSL_List src, LSL_Integer stride, LSL_Integer stride_index, LSL_Integer ascending)"
+  ],
+  "sourceLine": 6427
+ },
+ {
+  "name": "osGetParcelDetails",
+  "signatures": [
+   "public LSL_List osGetParcelDetails(LSL_Key id, LSL_List param)"
+  ],
+  "sourceLine": 6432
+ },
+ {
+  "name": "osGetParcelIDs",
+  "signatures": [
+   "public LSL_List osGetParcelIDs()"
+  ],
+  "sourceLine": 6448
+ },
+ {
+  "name": "osGetParcelID",
+  "signatures": [
+   "public LSL_Key osGetParcelID()"
+  ],
+  "sourceLine": 6468
+ },
+ {
+  "name": "osOldList2ListStrided",
+  "signatures": [
+   "public LSL_List osOldList2ListStrided(LSL_List src, int start, int end, int stride)"
+  ],
+  "sourceLine": 6482
+ },
+ {
+  "name": "osGetPrimCount",
+  "signatures": [
+   "public LSL_Integer osGetPrimCount()",
+   "public LSL_Integer osGetPrimCount(LSL_Key object_id)"
+  ],
+  "sourceLine": 6565
+ },
+ {
+  "name": "osGetSittingAvatarsCount",
+  "signatures": [
+   "public LSL_Integer osGetSittingAvatarsCount()",
+   "public LSL_Integer osGetSittingAvatarsCount(LSL_Key object_id)"
+  ],
+  "sourceLine": 6578
+ },
+ {
+  "name": "osAESEncrypt",
+  "signatures": [
+   "public LSL_String osAESEncrypt(string secret, string plainText)"
+  ],
+  "sourceLine": 6591
+ },
+ {
+  "name": "osAESDecrypt",
+  "signatures": [
+   "public LSL_String osAESDecrypt(string secret, string encryptedText)"
+  ],
+  "sourceLine": 6605
+ },
+ {
+  "name": "osAESEncryptTo",
+  "signatures": [
+   "public LSL_String osAESEncryptTo(string secret, string plainText, string ivString)"
+  ],
+  "sourceLine": 6619
+ },
+ {
+  "name": "osAESDecryptFrom",
+  "signatures": [
+   "public LSL_String osAESDecryptFrom(string secret, string encryptedText, string ivString)"
+  ],
+  "sourceLine": 6633
+ },
+ {
+  "name": "osGetLinkColor",
+  "signatures": [
+   "public LSL_Vector osGetLinkColor(LSL_Integer link, LSL_Integer face)"
+  ],
+  "sourceLine": 6647
+ },
+ {
+  "name": "osTemperature2sRGB",
+  "signatures": [
+   "public LSL_Vector osTemperature2sRGB(LSL_Float dtemp)"
+  ],
+  "sourceLine": 6665
+ },
+ {
+  "name": "osListFindListNext",
+  "signatures": [
+   "public LSL_Integer osListFindListNext(LSL_List lsrc, LSL_List ltest, LSL_Integer lstart, LSL_Integer lend, LSL_Integer linstance)"
+  ],
+  "sourceLine": 6700
+ },
+ {
+  "name": "osListAsFloat",
+  "signatures": [
+   "public LSL_Float osListAsFloat(LSL_List src, int index)"
+  ],
+  "sourceLine": 6804
+ },
+ {
+  "name": "osListAsInteger",
+  "signatures": [
+   "public LSL_Integer osListAsInteger(LSL_List src, int index)"
+  ],
+  "sourceLine": 6820
+ },
+ {
+  "name": "osListAsString",
+  "signatures": [
+   "public LSL_String osListAsString(LSL_List src, int index)"
+  ],
+  "sourceLine": 6836
+ },
+ {
+  "name": "osListAsVector",
+  "signatures": [
+   "public LSL_Vector osListAsVector(LSL_List src, int index)"
+  ],
+  "sourceLine": 6852
+ },
+ {
+  "name": "osListAsRotation",
+  "signatures": [
+   "public LSL_Rotation osListAsRotation(LSL_List src, int index)"
+  ],
+  "sourceLine": 6868
+ }
+]
