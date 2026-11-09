@@ -16,6 +16,11 @@ Required layout:
 ```
 OpenSim_Variables/
     index.php
+    installation.php
+    install-standalone.php
+    install-grid.php
+    install-first-login.php
+    install-checklist.php
     oar.php
     iar.php
     regions.php
@@ -75,3 +80,13 @@ Submit documentation corrections with exact source references, target version an
 On `ini-parameters.php`, users can filter entries by section and source-file category: OpenSimDefaults.ini, example/prototype/test templates, config-include architecture files, ROBUST files, optional module configs, OpenSim.ini and other INI files. One entry can have several source categories; category totals overlap.
 
 On `sections.php`, each listed parameter also shows its file references and category. These references describe **where the parameter was found in the CSV**, NOT which files are loaded or which parameter value is active on your installation. Consult simulator `config show` and the active ROBUST configuration to establish effective settings. No live grid configuration is accessed by this site.
+
+## Installation learning path (FR / EN)
+
+- `installation.php`: target version, architecture decision, SDK/build and prerequisites.
+- `install-standalone.php`: minimal single-process setup, SQLite default, first region.
+- `install-grid.php`: MySQL, ROBUST, GridCommon.ini, distributed regions.
+- `install-first-login.php`: create a user, login URI and viewer checks.
+- `install-checklist.php`: troubleshooting by symptom.
+
+Reference base: `Vlad-BloodMoon/opensim` `BUILDING.md`, `bin/OpenSim.ini.example`, `bin/config-include/StandaloneCommon.ini.example`, `bin/config-include/GridCommon.ini.example` and `bin/Robust.ini.example`. These are guided example procedures, not claims of tested production deployment. Do not treat the README in the fork as current voice-release documentation: review the dedicated BloodMoon-Voice repository for that.
