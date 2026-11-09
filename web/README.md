@@ -21,7 +21,8 @@ OpenSim_Variables/
     regions.php
     configuration.php
     sections.php            <- browsable alphabetical INI sections
-    ini-parameters.php      <- INI-referenced entries only
+    ini-parameters.php      <- INI references, categorized by source files
+    inc/ini-origin.php      <- source-file classifier for INI entries
     console.php
     procedures.php
     troubleshooting.php
@@ -68,3 +69,9 @@ Source verification is from the inspected `Vlad-BloodMoon/opensim` master branch
 
 ## Contribution policy
 Submit documentation corrections with exact source references, target version and a reproducible example. Include both English and French when possible.
+
+## INI provenance / Origine des références
+
+On `ini-parameters.php`, users can filter entries by section and source-file category: OpenSimDefaults.ini, example/prototype/test templates, config-include architecture files, ROBUST files, optional module configs, OpenSim.ini and other INI files. One entry can have several source categories; category totals overlap.
+
+On `sections.php`, each listed parameter also shows its file references and category. These references describe **where the parameter was found in the CSV**, NOT which files are loaded or which parameter value is active on your installation. Consult simulator `config show` and the active ROBUST configuration to establish effective settings. No live grid configuration is accessed by this site.
