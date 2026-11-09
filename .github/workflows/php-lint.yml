@@ -1,0 +1,20 @@
+name: PHP lint
+on:
+  push:
+    branches:
+      - opensim-variables-web
+  pull_request:
+    paths:
+      - 'web/**/*.php'
+      - '.github/workflows/php-lint.yml'
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check PHP syntax for every web file
+        run: |
+          set -euo pipefail
+          while IFS= read -r -d '' file; do
+            php -l "$file"
+          done < <(find web -type f -name '*.php' -print0)
