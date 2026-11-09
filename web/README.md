@@ -22,6 +22,7 @@ OpenSim_Variables/
     install-grid.php
     install-first-login.php
     install-checklist.php
+    install-logs.php         <- OpenSim / ROBUST log analysis first
     install-network.php
     install-hypergrid.php
     oar.php
@@ -100,3 +101,9 @@ Reference base: `Vlad-BloodMoon/opensim` `BUILDING.md`, `bin/OpenSim.ini.example
 - `install-hypergrid.php`: StandaloneHypergrid, GridHypergrid, ROBUST HG public connectors, HomeURI, GatekeeperURI, traveller inventory and cross-grid tests.
 - `install-network.php`: reference port roles, public/private separation, region TCP/UDP, DNS/NAT, example UFW firewall and testing.
 - Both chapters cite the matching 0.9.3.1 / .NET 8 fork source config files. Wiki primary pages could not be read directly when authored (website timeout); do not assert an exhaustive wiki transcription.
+
+## Log-first troubleshooting
+
+- `install-logs.php` covers OpenSim.log and Robust.log, the actual log4net configuration in `bin/OpenSim.exe.config` and `bin/Robust.exe.config`, live Linux and Windows reading, systemd journals, event correlation, MySQL service logs and safe sharing of extracts.
+- Install and general troubleshooting pages now point to log analysis before blind changes or restarts.
+- Paths and service unit names are illustrative; inspect each installation's working directory, log4net appender and service manager.
