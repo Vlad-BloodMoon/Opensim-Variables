@@ -1,0 +1,18 @@
+<?php
+declare(strict_types=1);
+$lang = (($_GET['lang']??'fr')==='en')?'en':'fr';
+$page=basename($_SERVER['SCRIPT_NAME'],'.php');
+function t($fr,$en){global $lang;return $lang==='fr'?$fr:$en;}
+function e($s){return htmlspecialchars((string)$s,ENT_QUOTES|ENT_SUBSTITUTE,'UTF-8');}
+function sec($fr,$en){echo '<h2>'.e(t($fr,$en)).'</h2>';}
+function p($fr,$en){echo '<p>'.e(t($fr,$en)).'</p>';}
+function callout($fr,$en){echo '<div class="callout">'.e(t($fr,$en)).'</div>';}
+function sample($code,$fr,$en){echo '<section class="sample"><p>'.e(t($fr,$en)).'</p><pre>'.e($code).'</pre><button class="copy" data-code="'.e($code).'">'.e(t('Copier','Copy')).'</button></section>';}
+function options_table($rows){echo '<div class="overflow"><table><thead><tr><th>'.e(t('Option','Option')).'</th><th>'.e(t('Signification','Meaning')).'</th><th>'.e(t('Attention','Caution')).'</th></tr></thead><tbody>';foreach($rows as $r)echo '<tr><td><code>'.e($r[0]).'</code></td><td>'.e(t($r[1],$r[2])).'</td><td>'.e(t($r[3],$r[4])).'</td></tr>';echo '</tbody></table></div>';}
+function begin_page($fr,$en,$frsub,$ensub){global $page,$lang;
+$pages=[['index','Accueil','Home'],['configuration','Fichiers INI','INI files'],['regions','Régions et varregions','Regions & varregions'],['oar','Archives OAR','OAR archives'],['iar','Archives IAR','IAR archives'],['performance','Performances','Performance'],['scripts','Scripts LSL / OSSL','LSL / OSSL scripts'],['dictionary','Dictionnaire INI','INI dictionary'],['sources','Références','References']];
+echo '<!doctype html><html lang="'.e($lang).'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>'.e(t($fr,$en)).' | OpenSimulator Handbook</title><meta name="description" content="OpenSimulator handbook: INI, OAR, IAR, regions, performance, LSL and OSSL in French and English."><link rel="stylesheet" href="assets/site.css"></head><body><header class="top"><div class="top-inner"><a class="logo" href="index.php?lang='.e($lang).'">OpenSimulator <strong>Handbook</strong><small>'.e(t('Encyclopédie communautaire','Community handbook')).'</small></a><div class="lang"><a class="'.($lang==='fr'?'active':'').'" href="'.e($page).'.php?lang=fr">FR</a><a class="'.($lang==='en'?'active':'').'" href="'.e($page).'.php?lang=en">EN</a></div></div></header><div class="layout"><aside><strong class="sidehead">'.e(t('SOMMAIRE','CONTENTS')).'</strong><nav>';
+foreach($pages as $n)echo '<a class="'.($page===$n[0]?'selected':'').'" href="'.e($n[0]).'.php?lang='.e($lang).'">'.e(t($n[1],$n[2])).'</a>';
+echo '</nav></aside><main><div class="hero"><span class="overline">OpenSimulator · '.strtoupper(e($lang)).'</span><h1>'.e(t($fr,$en)).'</h1><p>'.e(t($frsub,$ensub)).'</p></div><div class="body">';
+}
+function end_page(){echo '</div><footer>OpenSimulator Handbook · <a href="https://opensimulator.org/wiki/Main_Page">OpenSimulator Wiki</a> · <a href="https://github.com/Vlad-BloodMoon/opensim">OpenSimulator source</a><p>'.e(t('Documentation communautaire non officielle. Tester les restaurations et vérifier les options selon la version.','Unofficial community documentation. Test restores and verify options for your version.')).'</p></footer></main></div><script src="assets/site.js"></script></body></html>';}

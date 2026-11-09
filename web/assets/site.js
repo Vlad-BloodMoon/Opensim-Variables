@@ -1,0 +1,1 @@
+document.addEventListener("click",e=>{const b=e.target.closest("button.copy");if(!b)return;const s=b.dataset.code;navigator.clipboard?.writeText(s).then(()=>{const t=b.textContent;b.textContent="✓";setTimeout(()=>b.textContent=t,1200)});});

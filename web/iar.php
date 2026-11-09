@@ -1,0 +1,26 @@
+<?php require_once __DIR__.'/inc/site.php';begin_page('Archives IAR : inventaire, options et fusion','IAR archives: inventory, flags and merge','Sauvegardes complètes ou sélectives, avec ou sans assets, et restauration dans un dossier.','Full or selective backups, with or without assets, and restoring into an inventory folder.');
+sec('Comprendre les IAR','Understanding IAR');p('Un IAR sauvegarde des éléments et dossiers d’inventaire d’un avatar. Il ne sauvegarde pas le terrain ou les objets posés dans une région : cela relève des OAR.','An IAR backs up avatar inventory items and folders. It does not back up terrain or rezzed region objects: use OAR for those.');
+callout('Remplacez First Last par le nom du compte, PASSWORD par son mot de passe et les chemins par vos emplacements. N’exposez jamais de véritables mots de passe dans une documentation ou dans les captures de console.','Replace First Last with the account name, PASSWORD with its password and paths with your real locations. Never publish credentials in documentation or console screenshots.');
+sec('Sauvegarder un inventaire','Saving an inventory');
+sample('save iar First Last "/" PASSWORD /backups/avatar-full.iar','Sauvegarde de la racine de l’inventaire, assets compris.','Back up the inventory root including assets.');
+sample('save iar --noassets First Last "/" PASSWORD /backups/avatar-noassets.iar','Sauvegarde sans assets : archive plus légère mais dépendante des données déjà présentes sur le service assets à la restauration.','Save without assets: smaller archive, but restoration relies on assets already present.');
+sample('save iar --perm=CTM First Last "/" PASSWORD /backups/avatar-perms.iar','Exemple de filtrage par permissions : seules les entrées répondant aux critères demandés sont exportées.','Permission-filtered example: export only entries matching the requested permission criteria.');
+sample('save iar --excludefolder=Trash First Last "/" PASSWORD /backups/avatar-clean.iar','Exemple d’exclusion d’un dossier nommé Trash. Vérifiez le nom réel de votre dossier.','Example excluding a folder named Trash. Verify the actual folder name.');
+subheading('Options de save iar','save iar flags');
+options_table([
+['--noassets','Ne pas exporter les assets','Do not export asset data','Besoin des assets existants pour réutiliser les objets','Assets must be available to use objects'],
+['--skipbadassets','Ignorer les éléments dont l’asset principal manque','Skip items whose main asset is missing','Option de récupération d’inventaire endommagé ; perte possible','Recovery option for damaged inventory; may lose items'],
+['--creators, -c','Préserver les données de créateurs externes','Preserve foreign creator information','Utile pour les contenus Hypergrid','Useful for Hypergrid content'],
+['--home=URL, -h','Définir l’URL de service du profil','Set profile service URL','Vérifier l’URL','Verify the URL'],
+['--exclude=NAME/UUID, -e','Exclure un objet d’inventaire','Exclude an inventory item','Vérifier le nom ou UUID','Check name or UUID'],
+['--excludefolder=NAME/UUID, -f','Exclure un dossier et son contenu','Exclude a folder and contents','Ne pas omettre un dossier nécessaire','Do not exclude required folders'],
+['--perm=CTM','Filtrer les éléments selon Copy, Transfer et Modify','Filter by Copy, Transfer and Modify','Vérifier les permissions avant de partager','Review permissions before sharing'],
+['--verbose, -v','Afficher des messages supplémentaires','Show extra messages','Journaux potentiellement volumineux','Logs can be large']
+]);
+sec('Restaurer un IAR','Restoring an IAR');
+sample('load iar First Last "/" PASSWORD /backups/avatar-full.iar','Restauration dans l’inventaire du compte. Vérifier d’abord le contenu et le chemin.','Restore into the account inventory. Check content and destination path first.');
+sample('load iar --merge First Last "/" PASSWORD /backups/avatar-full.iar','Essaie de fusionner avec les dossiers existants plutôt que d’en créer systématiquement de nouveaux.','Tries to merge with existing folders rather than always creating new folders.');
+options_table([['--merge, -m','Fusionner les dossiers existants quand c’est possible','Merge existing folders when possible','Contrôler les doublons après import','Check for duplicate items after import']]);
+sec('Limites et précautions','Limitations and precautions');
+p('Une archive sans assets n’est pas autonome. Les permissions, les références à des créateurs et la disponibilité des assets peuvent affecter le résultat. Conservez des sauvegardes datées et réalisez un essai sur un compte de test.','An archive without assets is not self-contained. Permissions, creator references and asset availability may affect the outcome. Keep dated backups and test with a disposable account.');
+echo '<p><a href="https://github.com/Vlad-BloodMoon/opensim/blob/master/OpenSim/Region/CoreModules/Avatar/Inventory/Archiver/InventoryArchiverModule.cs">InventoryArchiverModule.cs</a> · <a href="https://opensimulator.org/wiki/Inventory_Archives">Inventory Archives Wiki</a></p>';end_page();
