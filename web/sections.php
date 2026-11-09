@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/inc/site.php';
+require_once __DIR__ . '/inc/ini-origin.php';
 $catalog = __DIR__ . '/INI.CSV';
 $sections = [];
 $error = null;
@@ -62,7 +63,8 @@ if ($error !== null) {
             echo '<p><strong>'.e(t('Valeur du catalogue','Catalog value')).' :</strong> <code>'.e($item['Value'] ?? '').'</code></p>';
             echo '<p><strong>'.e(t('Description technique (source anglaise)','Technical description (original English')).' :</strong> '.e($item['Description'] ?? '').'</p>';
             echo '<p><strong>'.e(t('Emplacement dans le code','Source code')).' :</strong> <small>'.e($item['SourceFiles'] ?? '').'</small></p>';
-            echo '<p><strong>'.e(t('Référence INI','INI reference')).' :</strong> <small>'.e($item['IniFiles'] ?? '').'</small></p></details>';
+            ini_provenance($item);
+            echo '</details>';
         }
         echo '</div>';
     } else {
