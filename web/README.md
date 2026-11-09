@@ -36,6 +36,11 @@ OpenSim_Variables/
     procedures.php
     troubleshooting.php
     performance.php
+    fsassets.php
+    fsassets-inodes.php
+    fsassets-migration.php
+    fsassets-backup.php
+    fsassets-troubleshooting.php
     voice.php
     voice-install.php
     voice-config.php
@@ -113,3 +118,7 @@ Reference base: `Vlad-BloodMoon/opensim` `BUILDING.md`, `bin/OpenSim.ini.example
 Every incident description in installation checks, archive/region troubleshooting, and WebRTC voice troubleshooting now follows a structured order: symptom and background → relevant logs → likely search terms (not guaranteed exact log messages) → read-only verification → conditional fix. Generic diagnostic markup is implemented in `inc/site.php`.
 
 OpenSim.log and Robust.log are distinct and often both relevant; read `install-logs.php` before modifying configuration. Back up logs and redact sensitive details before sharing.
+
+## FSAssets deep-dive / Guide FSAssets approfondi
+
+Five bilingual PHP chapters cover storage architecture and configuration, inode/byte capacity, SQL-to-FS migration and disk relocation, backups/restores, and log-first diagnostics. Source citations include `FSAssetService.cs`, `MySQLFSAssetData.cs`, schema migrations, `HGFSAssetService.cs` and ROBUST templates. Operational examples are not a substitute for testing on a staging grid.
