@@ -72,7 +72,7 @@ if ($error !== null) {
         foreach ($sections as $section => $rows) {
             $desc = isset($descriptions[$section]) ? t($descriptions[$section][0],$descriptions[$section][1]) : t('Parcourir les paramètres de cette section','Browse settings in this section');
             $url = 'sections.php?lang='.rawurlencode($lang).'&section='.rawurlencode($section);
-            echo '<a class="section-tile" data-name="'.e(mb_strtolower($section,'UTF-8')).'" href="'.e($url).'"><strong>['.e($section).']</strong><small>'.count($rows).' '.e(t('paramètres','settings')).'</small><span>'.e($desc).'</span></a>';
+            echo '<a class="section-tile" data-name="'.e(strtolower($section)).'" href="'.e($url).'"><strong>['.e($section).']</strong><small>'.count($rows).' '.e(t('paramètres','settings')).'</small><span>'.e($desc).'</span></a>';
         }
         echo '</div>';
     }
