@@ -20,6 +20,7 @@ OpenSim_Variables/
     iar.php
     regions.php
     configuration.php
+    sections.php            <- browsable alphabetical INI sections
     console.php
     procedures.php
     troubleshooting.php
@@ -42,6 +43,7 @@ Requires PHP 8+ and a conventional HTTP(S) web server. No database, framework or
 - Console, configuration precedence, complete backup/restore walkthroughs and troubleshooting.
 - Performance: measuring CPU, memory, disk, physics, scripts and service bottlenecks.
 - OSSL: **266 unique public os-prefixed methods** extracted from `OSSL_Api.cs` (297 declarations including overloads), with code references and wiki search links. Not all source methods necessarily map to callable/safe functions.
+- Dedicated INI section browser: search section names, browse every section and filter its settings.
 - INI dictionary: search across the existing CSV data.
 
 ## Editorial safeguards
