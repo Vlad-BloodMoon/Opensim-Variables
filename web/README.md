@@ -22,6 +22,8 @@ OpenSim_Variables/
     install-grid.php
     install-first-login.php
     install-checklist.php
+    install-network.php
+    install-hypergrid.php
     oar.php
     iar.php
     regions.php
@@ -92,3 +94,9 @@ On `sections.php`, each listed parameter also shows its file references and cate
 - `install-checklist.php`: troubleshooting by symptom.
 
 Reference base: `Vlad-BloodMoon/opensim` `BUILDING.md`, `bin/OpenSim.ini.example`, `bin/config-include/StandaloneCommon.ini.example`, `bin/config-include/GridCommon.ini.example` and `bin/Robust.ini.example`. These are guided example procedures, not claims of tested production deployment. Do not treat the README in the fork as current voice-release documentation: review the dedicated BloodMoon-Voice repository for that.
+
+## Hypergrid and network expansion
+
+- `install-hypergrid.php`: StandaloneHypergrid, GridHypergrid, ROBUST HG public connectors, HomeURI, GatekeeperURI, traveller inventory and cross-grid tests.
+- `install-network.php`: reference port roles, public/private separation, region TCP/UDP, DNS/NAT, example UFW firewall and testing.
+- Both chapters cite the matching 0.9.3.1 / .NET 8 fork source config files. Wiki primary pages could not be read directly when authored (website timeout); do not assert an exhaustive wiki transcription.
