@@ -43,8 +43,8 @@ Requires PHP 8+ and a conventional HTTP(S) web server. No database, framework or
 - Console, configuration precedence, complete backup/restore walkthroughs and troubleshooting.
 - Performance: measuring CPU, memory, disk, physics, scripts and service bottlenecks.
 - OSSL: **266 unique public os-prefixed methods** extracted from `OSSL_Api.cs` (297 declarations including overloads), with code references and wiki search links. Not all source methods necessarily map to callable/safe functions.
-- Dedicated INI section browser: search section names, browse every section and filter its settings.
-- INI dictionary: search across the existing CSV data.
+- INI section browser: filters the CSV to entries with INI file references and omits unresolved section names; some example-only or optional module entries remain.
+- Source code catalog: unfiltered raw extracted settings, including internal/inferred values; not a literal INI reference.
 
 ## Editorial safeguards
 The documentation is **not yet exhaustive** and is not affiliated with the OpenSimulator project.

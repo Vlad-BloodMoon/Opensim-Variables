@@ -14,7 +14,8 @@ if (!is_readable($catalog)) {
             if (count($row) !== count($header)) continue;
             $record = array_combine($header, $row);
             $section = trim($record['Section'] ?? '');
-            if ($section === '') continue;
+            if ($section === '' || in_array($section, ['(unresolved)', '{section}', '{name}', '<RegionName>'], true)) continue;
+            if (trim((string)($record['IniFiles'] ?? '')) === '') continue;
             if (!isset($sections[$section])) $sections[$section] = [];
             $sections[$section][] = $record;
         }
@@ -46,7 +47,7 @@ begin_page('Explorer les sections INI','Browse INI sections',
 if ($error !== null) {
     echo '<div class="callout">'.e($error).'</div>';
 } else {
-    echo '<div class="callout">'.e(t('Les sections proviennent du catalogue INI.CSV. Certaines sont dynamiques, inférées ou propres à des modules facultatifs. Elles ne correspondent pas toutes à une section à ajouter dans OpenSim.ini.', 'Sections come from INI.CSV. Some are dynamic, inferred, or specific to optional modules. Not every entry belongs in OpenSim.ini.')).'</div>';
+    echo '<div class="callout">'.e(t('Cet index est limité aux entrées possédant une référence explicite à un fichier INI dans le catalogue. Il peut encore contenir des modules facultatifs et des modèles : vérifiez toujours le fichier source avant d’ajouter un paramètre.', 'This index only includes entries with an explicit INI-file reference in the catalog. Optional modules and example templates may still appear: always verify the source file before adding settings.')).'</div>';
     if ($active !== '') {
         $rows = $sections[$active];
         echo '<p><a href="sections.php?lang='.e($lang).'">'.e(t('← Revenir à toutes les sections','← Back to all sections')).'</a></p>';
