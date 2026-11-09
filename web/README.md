@@ -36,6 +36,10 @@ OpenSim_Variables/
     procedures.php
     troubleshooting.php
     performance.php
+    database-admin.php
+    robust-services.php
+    disaster-recovery.php
+    operations-monitoring.php
     fsassets.php
     fsassets-inodes.php
     fsassets-migration.php
@@ -122,3 +126,10 @@ OpenSim.log and Robust.log are distinct and often both relevant; read `install-l
 ## FSAssets deep-dive / Guide FSAssets approfondi
 
 Five bilingual PHP chapters cover storage architecture and configuration, inode/byte capacity, SQL-to-FS migration and disk relocation, backups/restores, and log-first diagnostics. Source citations include `FSAssetService.cs`, `MySQLFSAssetData.cs`, schema migrations, `HGFSAssetService.cs` and ROBUST templates. Operational examples are not a substitute for testing on a staging grid.
+
+## Independent operations chapters
+
+- MySQL/MariaDB: service database topology, privileges, InnoDB evidence, backups, connectivity and diagnostics. Asset payload mechanics remain in FSAssets.
+- ROBUST services: central service reference, public/private ports, service responsibilities and incident tracing. Installation steps remain in install-grid and install-hypergrid.
+- Disaster recovery: entire grid inventory, coordinated restore points, restore order and drills. Per-archive OAR/IAR options remain in their dedicated chapters.
+- Operations monitoring: observability and alerting, separate from detailed physics/script tuning in performance.php.
